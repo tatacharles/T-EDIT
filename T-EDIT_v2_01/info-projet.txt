@@ -1,0 +1,115 @@
+# 09/07/2014
+- mise en place d'une page d'accueil, possibilité de choisir entre :
+	- editer (mode normal: dessiner, sauvegarder, charger)
+	- explorer (mode image: ce mode ne fait qu'afficher les images que l'on a sauvegardé)
+	- quitter (quitte le programme T-EDIT)
+
+- possibilité de revenir à la page d'accueil pour changer de mode avec le fichier "retour_accueil.c"
+- segmentation fault : sur la derniere image à cause du BUG
+
+# BUG # sur le changement d'image, il y a comme un d'écalage entre l'appui et le relachement du clic de la souris
+
+# 08/07/2014
+- coordonnées des icones de manière "générale", on a juste à changer les valeurs dans le fichier "declarations.h"
+
+# 02/07/2014
+
+ ##### DEBUT T-EDIT VERSION 2_00 ##### 
+
+
+# 22/06/2014
+- Fin de la version 1_00 du projet T-EDIT
+- possibilité de :
+	- dessiner
+	- sauvegarder une image bmp
+	- charger une image bmp
+	- changer la taille du pinceau
+	- changer la couleur
+
+- # BUG # Sur la sauvegarde et le chargement d'une image
+
+# 20/06/2014
+- mise en place d'une sauvegarde differente.
+
+# 29/05/2014
+- affiche la taille du pinceau à l'écran
+
+# 10/04/2014
+- possibilité de sauvegarder autant de fois que l'on veut. Le nom des images sont comme cela : screenshot_yymmdd_hhmmss.bmp
+  grace à la fonction : system("./sources/script_save.sh"); et le script : script_save.sh
+
+# 06/04/2014 bis
+- plus de latence quand on dessine. En mettant le switch des evenements dans une nouvelle boucle :
+
+ while (SDL_PollEvent(&event))
+ {
+  switch(event.type)
+  {
+   ...
+  }
+ }
+
+# 06/04/2014
+- pendant pres d'un mois: essaie d'optimiser au mieux le code avec plusieurs tentative tous tenue en echec :
+  - essai en remplaçant les appels de variables par des pointeurs (pour positionpoint0x etc.. )
+  - essai en changeant la boucles principales et le switch (sans succés que des bogues supplémentaire)
+  - essai en mettant l'option -O1 ou -O2 ou -O3 ou -Os lors de la compilation 
+    (il y a peut etre une amélioration mais qui n'est pas visible lors de l'éxecution du programme)
+- maintenant: essai en enlevant le maximum d'include que possible pour alléger le programme
+              trouver le maximum de chose sur le net pour optimiser le programme lors de son execution 
+
+# 04/03/2014
+- ajout d'un fond comme une feuille (initialisation_zone_dessin.c)
+- probleme rencontré quand on diminue de trop la taille du pinceau celui ci devient tres tres gros
+
+# 25/02/2014
+- problemes résolus pour les icones: "nouvelle page" et "sauvegarde"
+
+# 24/02/2014
+- rajout de sécurité sur les boutons: // sécurité pour ne pas relacher le clic n'importe où
+  probleme pour le relache de la souris sur les icones: "nouvelle page" et "sauvegarde"
+- icone de capture d'ecran sur le menu
+- capture d'ecran grace à cette icone
+
+# 23/02/2014
+- possibilité de capturer l'image de l'ecran
+- capture d'ecran grace à : flipvert.c et dans event_screen dans le cas ou on appui sur "s" pour save
+  http://fr.openclassrooms.com/forum/sujet/sauvegarde-de-son-ecran-opengl-en-images-bmp
+  http://content.gpwiki.org/index.php/OpenGL:Tutorials:Taking_a_Screenshot
+
+# 20/02/2014
+- test pour faire une capture d'ecran OpenGL
+- possiblité d'effacer l'ecran: new_page.c
+
+# 19/02/2014
+- possibilité d'augmenter ou de diminuer la taille du pinceau 
+- reajustement du contour noir lorsque l'on selectionne une couleur
+- ajustement du pinceau entre point et ligne quand on trace
+- creation de sous fonction choix_couleur (Probleme corriger des event.button, il faut mettre event dans le return "return" sinon rien n'est renvoyé pour l'évenement de la souris)
+
+# 18/02/2014
+- séparation du menu et de la zone de dessin
+- separation dans un .c pour dessiner
+- fond du menu de couleur grise
+- possibilité de changer de couleur
+- séparation en sous fonctions
+- création du Makefile
+
+# 16/02/2014
+resumer des decisions prise:
+ - editeur de dessin en SDL laissé tomber pour du OpenGL 
+   car impossible de dessiner sans que cela ne saccade (sans doute un probleme de buffer)
+   et si on relie les points par des lignes comme en opengl le rendu graphique est moche.
+ - Avec OpenGL dessin d'un point quand on clic puis lorsque lon trace ce n'est pas des points qui s'affiche mais plusieur ligne qui ce suivent.
+
+*******
+ BUG : lorsque que l'on trace sur les bords de la fenetre, une ligne se trace du bord vers l'origine du repere de la fenetre
+ Contournement ou Résolution : lorsque l'on trace a x = 0 (pour le point 0 et le point 1) rien ne se trace
+*******
+
+####### AIDE SUR LES FORUMS #######
+http://content.gpwiki.org/index.php/OpenGL:Tutorials:Taking_a_Screenshot
+fr.openclassrooms.com/forum/sujet/sauvegarde-de-son-ecran-opengl-en-images-bmp?page=1#message-85366943
+http://fr.openclassrooms.com/forum/sujet/script-shell-dans-un-programme-c?page=1#message-85624119
+http://fr.openclassrooms.com/forum/sujet/opengl-charger-une-texture-1?page=1#message-85934346
+###################################
