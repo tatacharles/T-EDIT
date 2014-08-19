@@ -1,4 +1,5 @@
 T-EDIT V2.01
+------------
 
 T-EDIT est un programme pour prendre des notes, ecrire et dessiner.
 Il est ecrit en C et utilise les bibliotheques graphique :
@@ -24,7 +25,3 @@ Partie SOFTWARE :
 
  - Raspbian
  - T-EDIT v2.01
-
-
-
-
