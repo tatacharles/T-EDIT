@@ -25,3 +25,14 @@ Partie SOFTWARE :
 
  - Raspbian
  - T-EDIT v2.01
+
+
+// POUR LA COMPILATION SOUS LINUX AVEC gcc/g++
+// LA COMPILATION TOTAL : make
+//
+// VERSIONS UTILISEES : SDL(v1.2) OpengGL(v2.1)
+//
+// INSTALLATION SDL ET OPENGL : libsdl1.2 ET libgl1-mesa-swx11(POUR LE RASPBERRY PI)
+//
+// CHARLES TATA Licence CC-BY
+//
