@@ -1,0 +1,4 @@
+#ifndef LBMP_H_INCLUDED
+#define LBMP_H_INCLUDED
+
+#endif // LBMP_H_INCLUDED
