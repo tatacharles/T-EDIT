@@ -36,3 +36,26 @@ Partie SOFTWARE :
 //
 // CHARLES TATA Licence CC-BY
 //
+
+Fonctionnalitées:
+-----------------
+
+ - dessiner
+ - sauvegarder une image bmp
+ - charger une image bmp
+ - changer la taille du pinceau (entre 1 et 10)
+ - changer la couleur
+
+ - 2 modes:
+  - editer (mode normal: dessiner, sauvegarder, charger)
+  - explorer (mode image: ce mode ne fait qu'afficher les images que l'on a sauvegardé)
+  - quitter (quitte le programme T-EDIT)
+
+PS : pour faire un retour vers la page d'accueil, il suffit de faire glisser le curseur de gauche à droite en haute de l'ecran.
+(cf: voir les images retour-1.png et retour-2.png
+
+
+#BUG#
+-----
+ - Probleme entre le chargement et la sauvegarde d'une image, au niveau des couleurs (sans doute sur le codage)
+ - Probleme dans le chargement des images. Il y a un décalage 
