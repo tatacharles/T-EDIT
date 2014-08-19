@@ -27,15 +27,16 @@ Partie SOFTWARE :
  - T-EDIT v2.01
 
 
-// POUR LA COMPILATION SOUS LINUX AVEC gcc/g++
-// LA COMPILATION TOTAL : make
-//
-// VERSIONS UTILISEES : SDL(v1.2) OpengGL(v2.1)
-//
-// INSTALLATION SDL ET OPENGL : libsdl1.2 ET libgl1-mesa-swx11(POUR LE RASPBERRY PI)
-//
-// CHARLES TATA Licence CC-BY
-//
+#
+# POUR LA COMPILATION SOUS LINUX AVEC gcc/g++
+# LA COMPILATION TOTAL : make
+#
+# VERSIONS UTILISEES : SDL(v1.2) OpengGL(v2.1)
+#
+# INSTALLATION SDL ET OPENGL : libsdl1.2 ET libgl1-mesa-swx11(POUR LE RASPBERRY PI)
+#
+# CHARLES TATA Licence CC-BY
+#
 
 Fonctionnalitées:
 -----------------
@@ -52,7 +53,7 @@ Fonctionnalitées:
   - quitter (quitte le programme T-EDIT)
 
 PS : pour faire un retour vers la page d'accueil, il suffit de faire glisser le curseur de gauche à droite en haute de l'ecran.
-(cf: voir les images retour-1.png et retour-2.png
+(cf: voir les images retour-1.png et retour-2.png)
 
 
 #BUG#
